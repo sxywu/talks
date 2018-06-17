@@ -19,10 +19,89 @@
   src: url("../lib/font/CatMule-Caps.otf");
 }
 
-h1, h2, h3 {
-  font-family: "CatMule Caps";
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+.reveal {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: #222; }
+
+::selection {
+  color: #fff;
+  background: #98bdef;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #222;
+  font-family: 'CatMule Caps', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h2 {
+  font-size: 1.6em; }
+
+.reveal h3 {
+  font-size: 1.3em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+.reveal strong {
+  font-family: 'Open Sans', sans-serif;
 }
 
-body {
-  font-family: "Libre Baskerville";
-}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a:hover {
+  color: #333;
+  border-bottom: 1px solid;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a53a1; }
+
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
