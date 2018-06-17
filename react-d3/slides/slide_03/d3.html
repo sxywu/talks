@@ -1,0 +1,102 @@
+<style>
+  #d3 {
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+  }
+  #d3 .fragment {
+    position: relative;
+  }
+  #d3 span {
+    line-height: 2;
+  }
+  #d3 .top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  #d3 .credit {
+    position: absolute;
+    right: 40px;
+    bottom: 15px; /*image is 120px tall*/
+    text-align: right;
+    font-size: 10px;
+    font-family: 'Open Sans';
+    color: #ccc;
+    cursor: pointer;
+    border-bottom: none;
+  }
+  #d3 .subtitle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 32px; /*image is 120px tall*/
+  }
+  #d3 .subtitle span {
+    background: rgba(255,255,255,0.75);
+    padding: 2px 10px;
+  }
+  #d3 .fragment img {
+    margin-bottom: 20px;
+  }
+</style>
+
+<section id="d3">
+  <h2>D3</h2>
+
+  <div style='position:relative'>
+    <div class='fragment fade-out' data-fragment-index='3'>needs dom 🖌</div><br />
+    <div class='top fragment fade-in' data-fragment-index='3' style='text-decoration:line-through'>
+      needs dom 🖌
+    </div>
+  </div>
+
+  <div style='position:relative'>
+    <div class='fragment fade-out' data-fragment-index='3'>
+      <div class='fragment fade-in' data-fragment-index='0'>
+        <img src='slides/slide_03/transition.gif' />
+        <div class='subtitle'>
+          <span>transitions</span>
+        </div>
+      </div>
+      <div class='fragment fade-in' data-fragment-index='1'>
+        <img src='slides/slide_03/axis.png' />
+        <div class='subtitle'>
+          <span>axes</span>
+        </div>
+        <a src='https://bl.ocks.org/mbostock/e3f4376d54e02d5d43ae32a7cf0e6aa9'
+          target='_new' class='credit'>bl.ocks.org/mbostock</a>
+      </div>
+      <div class='fragment fade-in' data-fragment-index='2'>
+        <img src='slides/slide_03/brush.gif' style='width:90%' />
+        <div class='subtitle'>
+          <span>brushes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class='top'>
+      <div class='fragment fade-in' data-fragment-index='4'>
+        <img src='slides/slide_03/layouts.png' />
+        <div class='subtitle'>
+          <span>layouts</span>
+        </div>
+        <div class='credit'>bl.ocks.org/mbostock</div>
+      </div>
+      <div class='fragment fade-in' data-fragment-index='5'>
+        <img src='slides/slide_03/geo.png' />
+        <div class='subtitle'>
+          <span>geo</span>
+        </div>
+        <a src='https://bl.ocks.org/fil/cb7930254c9e7062114678d62d9be5ac'
+          target='_new' class='credit'>bl.ocks.org/fil</a>
+      </div>
+      <div class='fragment fade-in' data-fragment-index='6'>
+        <img src='slides/slide_03/shapes.png' />
+        <div class='subtitle'>
+          <span>shape</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

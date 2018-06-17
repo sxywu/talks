@@ -1,0 +1,271 @@
+<style>
+  #d3code-graph {
+    margin-top: 30px;
+  }
+  #d3code-graph span {
+    line-height: 2;
+  }
+  #d3code-graph pre {
+    box-shadow: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 900px;
+  }
+  #d3code-graph pre.highlight {
+    position: absolute;
+    width: 940px;
+    left: 60px;
+    font-size: 20px;
+  }
+  #d3code-graph pre code {
+    max-height: 900px;
+  }
+  #d3code-graph .fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
+</style>
+
+<section id="d3code-graph">
+  <pre style='visibility:hidden'><code class='javascript'></code></pre>
+  <pre><code class='javascript'>
+class Graph extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {selected: null};
+
+    this.selectNode = this.selectNode.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.version === this.props.version) {
+      // if version is the same, no updates to data
+      // so it must be interaction to select+highlight a node
+      this.calculateHighlights(nextState.selected);
+      this.circles.attr('opacity', d =>
+        !nextState.selected || this.highlightedNodes[d.key] ? 1 : 0.2)
+      this.lines.attr('opacity', d =>
+        !nextState.selected || this.highlightedLinks[d.key] ? 0.5 : 0.1)
+      return false;
+    }
+    return true;
+  }
+
+  componentDidMount() {
+    this.container = d3.select(this.refs.container);
+    this.calculateData();
+    this.calculateHighlights(this.state.selected);
+    this.renderLinks();
+    this.renderNodes();
+  }
+
+  componentDidUpdate() {
+    this.calculateData();
+    this.calculateHighlights(this.state.selected);
+    this.renderLinks();
+    this.renderNodes();
+  }
+
+  calculateData() {
+    var {nodes, links} = this.props;
+    simulation.nodes(nodes)
+      .force('link', d3.forceLink(links).id(d => d.key).distance(100));
+
+    _.times(2000, () => simulation.tick());
+    this.nodes = nodes;
+    this.links = links;
+  }
+
+  calculateHighlights(selected) {
+    this.highlightedNodes = {};
+    this.highlightedLinks = {};
+    if (selected) {
+      this.highlightedNodes[selected] = 1;
+      _.each(this.links, link => {
+        if (link.source.key === selected) {
+          this.highlightedNodes[link.target.key] = 1;
+          this.highlightedLinks[link.key] = 1;
+        }
+        if (link.target.key === selected) {
+          this.highlightedNodes[link.source.key] = 1;
+          this.highlightedLinks[link.key] = 1;
+        }
+      });
+    }
+  }
+
+  renderNodes() {
+    this.circles = this.container.selectAll('circle')
+      .data(this.nodes, d => d.key);
+    // exit
+    this.circles.exit().remove();
+    // enter + update
+    this.circles = this.circles.enter().append('circle')
+      .classed('node', true)
+      .merge(this.circles)
+      .attr('cx', d => d.x)
+      .attr('cy', d => d.y)
+      .attr('r', d => d.size)
+      .attr('opacity', d =>
+        !this.state.selected || this.highlightedNodes[d.key] ? 1 : 0.2)
+      .on('click', this.selectNode);
+  }
+
+  renderLinks() {
+    this.lines = this.container.selectAll('line')
+      .data(this.links, d => d.key);
+    // exit
+    this.lines.exit().remove();
+    // enter + update
+    this.lines = this.lines.enter().insert('line', 'circle')
+      .classed('link', true)
+      .merge(this.lines)
+      .attr('stroke-width', d => d.size)
+      .attr('x1', d => d.source.x)
+      .attr('x2', d => d.target.x)
+      .attr('y1', d => d.source.y)
+      .attr('y2', d => d.target.y)
+      .attr('opacity', d =>
+        !this.state.selected || this.highlightedLinks[d.key] ? 0.5 : 0.1);
+  }
+
+  selectNode(node) {
+    if (node.key === this.state.selected) {
+      this.setState({selected: null});
+    } else {
+      this.setState({selected: node.key});
+    }
+  }
+
+  render() {
+    return (
+      <svg ref='container' />
+    )
+  }
+}
+  </pre></code>
+<!--
+********************************************************************************
+**  HIGLIGHT CODE START HERE
+******************************************************************************** -->
+
+  <div class='fade'></div>
+
+  <pre class='highlight fragment fade-out' style='top:40px' data-fragment-index='1'>
+    <code class='javascript'>
+render() {
+  return (
+    <svg ref='container'></svg>
+  )
+}
+    </code>
+    <code class='javascript fragment' data-noescape data-fragment-index='0'>
+componentDidMount() {
+  <mark>this.container = d3.select(this.refs.container);</mark>
+  this.calculateData();
+  this.calculateHighlights(this.state.selected);
+  this.renderLinks();
+  this.renderNodes();
+}
+
+componentDidUpdate() {
+  this.calculateData();
+  this.calculateHighlights(this.state.selected);
+  this.renderLinks();
+  this.renderNodes();
+}
+    </code>
+  </pre>
+
+  <pre class='highlight fragment fade-out' style='top:40px' data-fragment-index='3'>
+    <code class='javascript fragment' data-fragment-index='1'>
+calculateData() {
+  var {nodes, links} = this.props;
+  simulation.nodes(nodes)
+    .force('link', d3.forceLink(links).id(d => d.key).distance(100));
+
+  _.times(2000, () => simulation.tick());
+  this.nodes = nodes;
+  this.links = links;
+}
+    </code>
+    <code class='javascript fragment' data-noescape data-fragment-index='2'>
+calculateHighlights(selected) {
+  this.highlightedNodes = {};
+  this.highlightedLinks = {};
+  if (selected) {
+    this.highlightedNodes[selected] = 1;
+    _.each(this.links, link => {
+      if (link.source.key === selected) {
+        this.highlightedNodes[link.target.key] = 1;
+        this.highlightedLinks[link.key] = 1;
+      }
+      if (link.target.key === selected) {
+        this.highlightedNodes[link.source.key] = 1;
+        this.highlightedLinks[link.key] = 1;
+      }
+    });
+  }
+}
+    </code>
+  </pre>
+
+  <pre class='highlight fragment fade-out' style='top:140px' data-fragment-index='4'>
+    <code class='javascript fragment' data-noescape data-fragment-index='3'>
+renderNodes() {
+  this.circles = this.container.selectAll('circle')
+    .data(this.nodes, d => d.key);
+  // exit
+  this.circles.exit().remove();
+  // enter + update
+  this.circles = this.circles.enter().append('circle')
+    .classed('node', true)
+    .merge(this.circles)
+    .attr('cx', d => d.x)
+    .attr('cy', d => d.y)
+    .attr('r', d => d.size)
+    .attr('opacity', d =>
+      <mark>!this.state.selected || this.highlightedNodes[d.key] ? 1 : 0.2)</mark>
+    .on('click', this.selectNode);
+}
+    </code>
+    <span class='javascript fragment' data-fragment-index='3'>* Best Practice</span>
+  </pre>
+
+  <pre class='highlight fragment fade-out' style='top:240px' data-fragment-index='5'>
+    <code class='javascript fragment' data-fragment-index='4'>
+selectNode(node) {
+  if (node.key === this.state.selected) {
+    this.setState({selected: null});
+  } else {
+    this.setState({selected: node.key});
+  }
+}
+    </code>
+    <span class='javascript fragment' data-fragment-index='4'>* Best Practice</span>
+  </pre>
+
+  <pre class='highlight' style='top:140px'>
+    <code class='javascript fragment' data-noescape data-fragment-index='5'>
+shouldComponentUpdate(nextProps, nextState) {
+  <mark>if (nextProps.version === this.props.version) {</mark>
+    // if version is the same, no updates to data
+    // so it must be interaction to select+highlight a node
+    this.calculateHighlights(nextState.selected);
+    this.circles.attr('opacity', d =>
+      !nextState.selected || this.highlightedNodes[d.key] ? 1 : 0.2)
+    this.lines.attr('opacity', d =>
+      !nextState.selected || this.highlightedLinks[d.key] ? 0.5 : 0.1)
+    <mark>return false;</mark>
+  }
+  return true;
+}
+    </code>
+    <span class='javascript fragment' data-fragment-index='5'>* Performance</span>
+  </pre>
+</section>
