@@ -1,0 +1,52 @@
+<style scoped>
+#shirley {
+  line-height: 2;
+}
+
+#shirley .container {
+  display: grid;
+  grid-template-columns: 360px 40px 360px 40px 360px;
+  justify-content: center;
+  grid-gap: 20px;
+}
+</style>
+
+<section id="shirley">
+  <span class='content fragment fade-out' data-fragment-index='0' >
+    <h2>Hi, I'm Shirley!</h2>
+    <div>
+      I'm an independent creator<br />
+      of <strong>data visualizations</strong>.
+    </div>
+  </span>
+
+  <span class='container content top fragment fade-in' data-fragment-index='0' >
+    <div style='grid-column: 1 / 2'>
+      <h3>college</h3>
+      <p>
+        business &<br />
+        computer science
+      </p>
+    </div>
+
+    <div style='grid-column: 2 / 3'>→</div>
+
+    <div style='grid-column: 3 / 4'>
+      <h3>post-grad</h3>
+      <p>
+        front-end dev<br />
+        at a big data company
+      </p>
+    </div>
+
+    <div style='grid-column: 4 / 5'>→</div>
+
+    <div style='grid-column: 5 / 6'>
+      <h3>on the side</h3>
+      <p>
+        data visualization<br />
+        projects for fun
+      </p>
+    </div>
+  </span>
+</section>
