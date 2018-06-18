@@ -49,6 +49,15 @@
   border-bottom: 1px solid;
 }
 
+
+/* fix something in the center of the page */
+.reveal .center-fix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
