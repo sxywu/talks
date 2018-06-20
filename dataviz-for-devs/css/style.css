@@ -15,6 +15,21 @@
 }
 
 @font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
   font-family: "CatMule Caps";
   src: url("../lib/font/CatMule-Caps.otf");
 }
