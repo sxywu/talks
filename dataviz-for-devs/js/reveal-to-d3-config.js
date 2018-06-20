@@ -3,18 +3,7 @@
 var pt = pt || {};
 
 pt.slideIdToFunctions = {
-  'about-us': {
-    'init': function() {
-      pt.aboutUs.init();
-    },
-    4: () => {
-      d3.select('#about-us .writeup img').style('opacity', 1);
-    },
-    5: () => {
-      d3.select('#about-us .writeup img').style('opacity', 0.5);
-    }
-  },
-  'code-flowers-svg': {
+  'filmflowers-code': {
     init: () => {
       pt.codeFlowers.init();
     },
