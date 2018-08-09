@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<title>data visualization for developers</title>
+
+		<meta name="description" content="data visualization for developers">
+		<meta name="author" content="Shirley Wu">
+	    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, data art">
+
+		<meta property="og:title" content="data visualization for developers">
+		<meta property="og:url" content="http://sxywu.com/talks/dataviz-for-devs">
+		<meta property="og:description" content="data visualization for developers">
+		<meta property="og:type" content="article">
+		<meta property="og:locale" content="en_US">
+
+		<!-- <meta property="og:image" content="http://www.datasketch.es/january/code/nadieh/img/all_fights_DBZ.jpg">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1140">
+		<meta property="og:image:height" content="570"> -->
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@sxywu">
+		<meta name="twitter:creator" content="@sxywu">
+		<meta name="twitter:title" content="data visualization for developers">
+		<meta name="twitter:description" content="data visualization for developers">
+		<!-- <meta name="twitter:image:src" content="http://www.datasketch.es/january/code/nadieh/img/all_fights_DBZ.jpg"> -->
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/style.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- Intro -->
+				<section data-external="slides/slide_01/title.html"></section>
+				<section data-external="slides/slide_02/shirley.html"></section>
+
+
+			</div>
+
+		</div>
+
+		<!-- REVEAL -->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<!-- UNDERSCORE -->
+		<script src="js/underscore.js"></script>
+
+		<!-- D3 -->
+		<script src="js/d3.v4.min.js"></script>
+		<script src="js/d3-annotation.min.js"></script>
+
+		<!-- REVEAL TO D3 -->
+		 <script src="js/reveal-to-d3-config.js"></script>
+		 <script src="js/reveal-to-d3.js"></script>
+
+		 <!-- GREENSOCK -->
+ 		<script src="js/TweenMax.min.js"></script>
+
+		<!-- MY OWN SCRIPTS -->
+		<script src="slides/slide_20/filmflowers_code.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+				// The "normal" size of the presentation, aspect ratio will be preserved
+			    // when the presentation is scaled to fit different resolutions. Can be
+			    // specified using percentage units.
+			    width: 1920, //'100%',
+			    height: 1080, //'100%',
+			    // Factor of the display size that should remain empty around the content
+    			margin: 0,
+				// Bounds for smallest/largest possible scale to apply to content
+    			minScale: 0.2,
+    			maxScale: 4,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
