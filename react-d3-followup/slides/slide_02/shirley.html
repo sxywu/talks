@@ -5,7 +5,6 @@
 #shirley .top {
   position: absolute;
   width: 100%;
-  top: 0;
   left: 0;
 }
 #shirley .content {
@@ -13,6 +12,7 @@
   background: #fff;
   padding: 20px;
   display: inline-block;
+  width: 100%;
 }
 #shirley img {
   box-shadow: 0 0 5px #cfcfcf;
@@ -28,8 +28,25 @@
     </div>
   </span>
 
-  <span class='top fragment fade-in' data-fragment-index='0' >
-    <h2>2017:</h2>
-    <img src='slides/slide_02/lastyear.png' />
+  <span class='fragment fade-out' data-fragment-index='1' >
+    <span class='top fragment fade-in' data-fragment-index='0' >
+      <h2>Last year:</h2>
+      <img src='slides/slide_02/lastyear.png' height='600' />
+    </span>
+  </span>
+
+  <span class='fragment fade-out' data-fragment-index='2' >
+    <span class='top fragment fade-in' data-fragment-index='1' >
+      <h2>Last year:</h2>
+      <img src='slides/slide_02/when.png' />
+    </span>
+  </span>
+
+  <span class='fragment fade-out' data-fragment-index='3' >
+    <span class='top fragment fade-in' data-fragment-index='2' >
+      <h2>Last year:</h2>
+      <img src='slides/slide_02/how1.png' width='600' /><br />
+      <img src='slides/slide_02/how2.png' width='600' />
+    </span>
   </span>
 </section>
