@@ -1,0 +1,95 @@
+<style scoped>
+#d3-api {
+    width: 1920px;
+    height: 1080px;
+}
+
+#d3-api .background img {
+  position: absolute;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#d3-api .middle {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+}
+
+#d3-api .container {
+  display: grid;
+  grid-template-columns: 160px 40px 240px 40px 280px;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 40px;
+}
+
+#d3-api .container div {
+  z-index: 100;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+</style>
+
+<section id="d3-api">
+
+	<div class='background'>
+    <div class='fragment fade-out' data-fragment-index='1'>
+      <img src='slides/slide_07/api.png' />
+      <img class='fragment' data-fragment-index='0' src='slides/slide_07/layout.jpg'  />
+    </div>
+
+    <img class='fragment' data-fragment-index='6' src='slides/slide_07/layout.jpg'  />
+    <!-- <img class='fragment' data-fragment-index='6' src='slides/slide_07/react.jpg' /> -->
+  </div>
+
+  <div class='middle fragment fade-out' data-fragment-index='5'>
+    <div class='container fragment' data-fragment-index='1'>
+      <!-- first row -->
+      <div>raw data</div>
+      <div>→</div>
+      <div><strong>scales</strong></div>
+      <div>→</div>
+      <div>x & y<br />width & height<br />angle & radius<br />color</div>
+    </div>
+
+    <div class='container fragment' data-fragment-index='2'>
+      <!-- second row -->
+      <div>raw data</div>
+      <div>→</div>
+      <div><strong>forces<br />hierarchies<br /></strong></div>
+      <div>→</div>
+      <div>x & y positions</div>
+    </div>
+
+    <div class='container fragment' data-fragment-index='3'>
+      <!-- second row -->
+      <div>raw data</div>
+      <div>→</div>
+      <div><strong>geographies<br /></strong></div>
+      <div>→</div>
+      <div>x & y positions</div>
+    </div>
+
+    <div class='container fragment' data-fragment-index='4'>
+      <!-- third row -->
+      <div>raw data</div>
+      <div>→</div>
+      <div><strong>chords<br />shapes<br /></strong></div>
+      <div>→</div>
+      <div>path commands</div>
+    </div>
+  </div>
+
+  <div class='middle fragment fade-out' data-fragment-index='6'>
+    <div class='fragment' data-fragment-index='5'>
+      <strong>brush</strong><br /><br />
+      <strong>drag</strong><br /><br />
+      <strong>zoom & pan</strong>
+    </div>
+  </div>
+
+</section>

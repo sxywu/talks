@@ -1,0 +1,62 @@
+<style scoped>
+#final-design {
+  width: 1920px;
+  height: 1080px;
+  line-height: 1.6
+}
+
+#final-design .background img {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#final-design .middle {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+}
+
+#final-design span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 40px;
+}
+</style>
+
+<section id="final-design">
+
+  <div class='background'>
+    <div class='fragment fade-out' data-fragment-index='2'>
+      <img src='slides/slide_17/design.png'>
+      <img class='fragment' data-fragment-index='0'
+        src='slides/slide_17/histo.png'>
+      <img class='fragment' data-fragment-index='1'
+        src='slides/slide_17/custom.png'>
+    </div>
+
+    <img class='fragment' data-fragment-index='4'
+      src='slides/slide_17/seasons.png'>
+  </div>
+
+  <div class='fragment fade-out' data-fragment-index='4'>
+    <div class='middle fragment' data-fragment-index='2'>
+      <span>
+        <h2>mark</h2>
+        <img width='200' src='slides/slide_17/mark.png'><br />
+        movie
+      </span>
+      <span class='fragment' data-fragment-index='3'>
+        <h2>channels</h2>
+        <p>
+          release date → x-position<br />
+          box office → y-position<br />
+          metascore → color<br />
+        </p>
+      </span>
+    </div>
+  </div>
+</section>
