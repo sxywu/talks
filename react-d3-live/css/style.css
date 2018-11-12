@@ -1,0 +1,166 @@
+
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../lib/font/LibreBaskerville-Regular.ttf");
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../lib/font/LibreBaskerville-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../lib/font/LibreBaskerville-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("../lib/font/OpenSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+  font-family: "CatMule Caps";
+  src: url("../lib/font/CatMule-Caps.otf");
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+.reveal {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: #222; }
+
+::selection {
+  color: #fff;
+  background: #98bdef;
+  text-shadow: none; }
+
+.reveal p {
+  margin: 20px 0;
+  line-height: 2;
+}
+
+.reveal .top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.reveal .underline {
+  border-bottom: 1px solid;
+}
+
+
+/* fix something in the center of the page */
+.reveal .center-fix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #222;
+  font-family: 'CatMule Caps', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h2 {
+  font-size: 1.6em; }
+
+.reveal h3 {
+  font-size: 1.3em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+.reveal strong {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a:hover {
+  color: #333;
+  border-bottom: 1px solid;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a53a1; }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: rgb(204, 119, 170); }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: rgb(53, 169, 147); }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: rgb(81, 173, 223); }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: rgb(109, 219, 196); }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: rgb(204, 119, 170); }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: rgb(53, 169, 147); }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: rgb(81, 173, 223); }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: rgb(109, 219, 196); }
