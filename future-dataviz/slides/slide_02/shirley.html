@@ -1,26 +1,25 @@
 <style scoped>
 #shirley {
   line-height: 2;
+  width: 1920px;
+  height: 1080px;
 }
-#shirley .top {
+
+#shirley .middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   width: 100%;
-  left: 0;
 }
-#shirley .content {
-  margin-top: 10%;
-  background: #fff;
-  padding: 20px;
-  display: inline-block;
-  width: 100%;
-}
+
 #shirley img {
-  box-shadow: 0 0 5px #cfcfcf;
+  padding: 20px;
 }
 </style>
 
 <section id="shirley">
-  <span class='content fragment fade-out' data-fragment-index='0' >
+  <span class='middle fragment fade-out' data-fragment-index='0' >
     <h2>Hi, I'm Shirley!</h2>
     <div>
       I'm an independent creator<br />
@@ -28,23 +27,13 @@
     </div>
   </span>
 
-  <span class='fragment fade-out' data-fragment-index='1' >
-    <span class='top fragment fade-in' data-fragment-index='0' >
-      <h2>Last year:</h2>
-      <img src='slides/slide_02/lastyear.png' height='600' />
-    </span>
+  <span class='middle fragment fade-in' data-fragment-index='0' >
+    <img src='slides/slide_02/guardian.gif' />
+    <img src='slides/slide_02/hamilton.gif' />
   </span>
 
-  <span class='fragment fade-out' data-fragment-index='2' >
-    <span class='top fragment fade-in' data-fragment-index='1' >
-      <h2>Last year:</h2>
-      <img src='slides/slide_02/when.png' />
-    </span>
-  </span>
-
-  <span class='top fragment fade-in' data-fragment-index='2' >
-    <h2>Last year:</h2>
-    <img src='slides/slide_02/how1.png' width='600' /><br />
-    <img src='slides/slide_02/how2.png' width='600' />
+  <span class='middle fragment fade-in' data-fragment-index='1' >
+    <img src='slides/slide_02/filmflowers.gif' />
+    <img src='slides/slide_02/moma.gif' />
   </span>
 </section>
