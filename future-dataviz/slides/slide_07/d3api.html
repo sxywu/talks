@@ -6,7 +6,6 @@
 
 #d3-api .background img {
   position: absolute;
-  height: 85%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -14,9 +13,19 @@
 
 #d3-api .middle {
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-55%);
   position: absolute;
   width: 100%;
+}
+
+#d3-api .relative {
+  position: relative;
+}
+
+#d3-api .absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #d3-api .container {
@@ -26,6 +35,7 @@
   align-items: center;
   grid-gap: 40px;
 }
+
 
 #d3-api .container div {
   z-index: 100;
@@ -56,36 +66,46 @@
       <div>x & y<br />width & height<br />angle & radius<br />color</div>
     </div>
 
-    <div class='container fragment' data-fragment-index='2'>
-      <!-- second row -->
-      <div>raw data</div>
-      <div>→</div>
-      <div><strong>forces<br />hierarchies<br /></strong></div>
-      <div>→</div>
-      <div>x & y positions</div>
+    <div class='fragment' data-fragment-index='2'>
+      <img src='slides/slide_07/layouts.png' />
+      <div class='container'>
+        <!-- second row -->
+        <div>raw data</div>
+        <div>→</div>
+        <div><strong>forces<br />hierarchies<br /></strong></div>
+        <div>→</div>
+        <div>x & y positions</div>
+      </div>
     </div>
 
-    <div class='container fragment' data-fragment-index='3'>
-      <!-- second row -->
-      <div>raw data</div>
-      <div>→</div>
-      <div><strong>geographies<br /></strong></div>
-      <div>→</div>
-      <div>x & y positions</div>
+    <div class='fragment' data-fragment-index='3'>
+      <img src='slides/slide_07/geo.png' />
+      <div class='container'>
+        <!-- third row -->
+        <div>raw data</div>
+        <div>→</div>
+        <div><strong>geographies<br /></strong></div>
+        <div>→</div>
+        <div>x & y positions</div>
+      </div>
     </div>
 
-    <div class='container fragment' data-fragment-index='4'>
-      <!-- third row -->
-      <div>raw data</div>
-      <div>→</div>
-      <div><strong>chords<br />shapes<br /></strong></div>
-      <div>→</div>
-      <div>path commands</div>
+    <div class='fragment' data-fragment-index='4'>
+      <img src='slides/slide_07/shapes.png' />
+      <div class='container'>
+        <!-- fourth row -->
+        <div>raw data</div>
+        <div>→</div>
+        <div><strong>chords<br />shapes<br /></strong></div>
+        <div>→</div>
+        <div>path commands</div>
+      </div>
     </div>
   </div>
 
   <div class='middle fragment fade-out' data-fragment-index='6'>
     <div class='fragment' data-fragment-index='5'>
+      <img src='slides/slide_07/brush.gif' /><br />
       <strong>brush</strong><br /><br />
       <strong>drag</strong><br /><br />
       <strong>zoom & pan</strong>
