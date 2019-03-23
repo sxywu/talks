@@ -1,0 +1,72 @@
+<style>
+	#hamilton-data {
+    position: relative;
+	}
+
+	#hamilton-data .slide-images {
+		height: 1080px;
+	}
+	#hamilton-data .slide-images img {
+		width: 50%;
+	}
+	#hamilton-data .slide-texts {
+		position: absolute;
+		width: 100%;
+	}
+	#hamilton-data .slide-texts span {
+		background: rgba(255, 255, 255, 1);
+		padding: 2px 5px;
+	}
+</style>
+
+<section id="hamilton-data">
+	<div class="slide-images">
+		<span class='fragment fade-out' data-fragment-index='0'>
+			<img class='center-fix' data-src='slides/slide_07/book_notes.jpg' />
+		</span>
+		<span class='fragment fade-out' data-fragment-index='1'>
+			<img class='center-fix fragment fade-in' data-fragment-index='0'
+				data-src='slides/slide_07/book_closed.jpg' />
+		</span>
+		<span class='fragment fade-out' data-fragment-index='2'>
+			<img class='center-fix fragment fade-in' data-fragment-index='1'
+				data-src='slides/slide_07/themes_meta.png' />
+		</span>
+		<span class='fragment fade-out' data-fragment-index='3'>
+			<img class='center-fix fragment fade-in' data-fragment-index='2'
+				data-src='slides/slide_07/characters_meta.png' />
+		</span>
+		<span class='fragment fade-out' data-fragment-index='4'>
+			<img class='center-fix fragment fade-in' data-fragment-index='3'
+				data-src='slides/slide_07/merge.png' />
+		</span>
+		<img class='center-fix fragment fade-in' data-fragment-index='4'
+			data-src='slides/slide_07/aggregated.png' />
+	</div>
+
+	<div class='slide-texts center-fix'>
+		<p class='fragment fade-out' data-fragment-index='0'><span>
+			1.<br />go through lyrics,<br />noting recurring phrases
+		</span></p>
+	</div>
+	<div class='slide-texts center-fix fragment fade-in' data-fragment-index='0'>
+		<p class='fragment fade-out' data-fragment-index='1'><span>
+			2.<br />group phrases into themes
+		</span></p>
+	</div>
+	<div class='center-fix slide-texts center-fix fragment fade-in' data-fragment-index='1'>
+		<p class='fragment fade-out' data-fragment-index='2'><span>
+			3.<br />go through lyrics again,<br />manually entering the themes
+		</span></p>
+	</div>
+	<div class='center-fix slide-texts fragment fade-in' data-fragment-index='2'>
+		<p class='fragment fade-out' data-fragment-index='3'><span>
+			4.<br />also enter characters<br />and conversations
+		</span></p>
+	</div>
+	<div class='center-fix slide-texts fragment fade-in' data-fragment-index='3'>
+		<p><span>
+			5.<br />aggregate by song<br />and line number
+		</span></p>
+	</div>
+</section>
