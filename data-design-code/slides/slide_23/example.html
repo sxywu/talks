@@ -1,0 +1,25 @@
+<style scoped>
+#example {
+  width: 1920px;
+  height: 1080px;
+}
+#example .iframe-container {
+  width: 1920px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+#example iframe {
+  width: 1940px;
+  height: 800px;
+  max-width: none;
+}
+</style>
+
+<section id="example">
+  <div class='iframe-container'>
+    <iframe src='../projects/vue-d3-example/' />
+  </div>
+</section>
