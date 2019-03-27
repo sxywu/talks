@@ -1,0 +1,40 @@
+<style>
+  #code-libraries-overview {
+    line-height: 1.6;
+  }
+
+  #code-libraries-overview .container {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-gap: 100px;
+    justify-content: center;
+  }
+</style>
+
+<section id="code-libraries-overview">
+  <div class='container fragment fade-out'  data-fragment-index='2'>
+    <div>
+      <h3>d3</h3>
+      <p>
+        <strong>scales</strong> and <strong>shapes</strong> to translate data into screenspace
+      </p>
+      <p>
+        <strong>axes</strong> and <strong>brushes</strong> for common dataviz patterns
+      </p>
+    </div>
+    <div class='fragment' data-fragment-index='0'>
+      <h3>vue</h3>
+      <p><strong>reactivity system</strong> to replace D3's enter-update-exit pattern and dispatch system
+    </div>
+    <div class='fragment' data-fragment-index='1'>
+      <h3>greensock</h3>
+      <p><strong>tween</strong> with vue to replace D3's transition</p>
+      <p><strong>timeline</strong> for multi-step animations</p>
+    </div>
+  </div>
+
+  <div class='fragment center-fix'  data-fragment-index='2'>
+    <p><strong>fewer</strong> lines of code</p>
+    <p><strong>faster</strong> development</p>
+  </div>
+</section>
