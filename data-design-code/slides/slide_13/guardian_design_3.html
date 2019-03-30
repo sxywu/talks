@@ -3,15 +3,20 @@
     position: relative;
 	}
 
-	#guardian-design-3 .slide-images {
-		height: 1080px;
-		position: relative;
-		margin: 0 auto;
-	}
-
-	#guardian-design-3 .slide-images img {
-		position: absolute;
+	#guardian-design-3 .container {
+		display: grid;
 		width: 100%;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 50% 50%;
+		grid-gap: 10px;
+		overflow: none;
+		align-items: end;
+	}
+	#guardian-design-3 .container img {
+		width: 100%;
+	}
+	#guardian-design-3 .full {
+		width: 1800px;
 	}
 
 	#guardian-design-3 .slide-texts {
@@ -25,22 +30,20 @@
 </style>
 
 <section id="guardian-design-3">
-	<!-- <div class='slide-images fragment' data-fragment-index='0'>
-		<img class='center-fix' data-src='slides/slide_13/dots.gif' />
-	</div> -->
-
-	<div class='slide-images'>
-		<img class='center-fix' data-src='slides/slide_13/dots.gif' />
+	<div class='container fragment' data-fragment-index='0'>
+		<img src='slides/slide_13/dots1.gif' style='margin-bottom: 9px' />
+		<img src='slides/slide_13/dots2.gif' />
+		<img src='slides/slide_13/dots.gif' />
+		<img src='slides/slide_13/dots3.gif' style="margin-top: 4px" />
 	</div>
 
-	<div class='slide-texts center-fix'>
+	<div class='center-fix fragment fade-out' data-fragment-index='0'>
+		<img class='full' data-src='slides/slide_13/dots.gif' />
+	</div>
+
+	<div class='slide-texts center-fix' >
 		<p><span>
 			Show most <strong>frequent</strong><br /> destinations for NY's homeless
 		</span></p>
-		<!-- <br />
-		<br />
-		<br />
-		<br />
-		<br /> -->
 	</div>
 </section>
